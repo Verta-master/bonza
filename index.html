@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,500,600,700|Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -204,7 +205,7 @@
       
       <div class="about__block">
         <figure class="about__img">
-          <img src="img/home-default1-740x740.jpg" alt="Julian Anderson" width="740" height="740">
+          <img class="wow bounceInLeft" data-wow-offset="200" data-wow-duration="1s" src="img/home-default1-740x740.jpg" alt="Julian Anderson" width="740" height="740">
         </figure>
         <div class="about__info">
           <p class="about__citation">Bonza Agency is a collaborative interdisciplinary practice engaging contemporary culture through architecture, urbanism, and advocacy.</p>
@@ -417,7 +418,8 @@
             <p class="project__title">STYLISH ELITE INTERIORS FOR YOUR HOME</p>
           </div>
           <div class="project__value">
-            <p class="project__number">348<span>PROJECTS</span></p>
+            <b class="project__number" data-max="348">0</b>
+            <span>PROJECTS</span>
           </div>
         </div>
       </div>
@@ -460,7 +462,9 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/counter.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
 
 <!-- Sliders -->
   <script>
@@ -473,6 +477,11 @@
       preventClicks: false,
       preventClicksPropagation: false,
     });
+  </script>
+  
+  <!-- Animation -->
+  <script>
+    new WOW().init();
   </script>
 </body>
 </html>
