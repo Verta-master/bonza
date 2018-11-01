@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  padding-bottom: 20px;
+  font-family: "Fira Sans Extra Condensed", "Arial", sans-serif;
+  
+  span {
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 500;
+    color: rgba(17,17,17,0.35);
+    text-transform: uppercase;
+  }
+  
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 52px;
+    line-height: 64px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background-color: @green;
+  }
+}
