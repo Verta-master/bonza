@@ -653,6 +653,7 @@ button {
   border: 0;
   opacity: 1;
   background-color: #e5e5e5;
+  outline: none;
 }
 .promo__slider .swiper-pagination-bullet-active {
   background-color: #22d96b;
@@ -958,7 +959,8 @@ button {
   background-size: cover;
 }
 .video__wrap {
-  height: 665px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1001,11 +1003,16 @@ button {
 .portfolio__item {
   position: relative;
   width: 30%;
+  height: 380px;
   margin-bottom: 30px;
   overflow: hidden;
+  padding-bottom: 0;
 }
 .portfolio__item img {
   display: block;
+  margin-top: 0;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 .portfolio__item::before {
   content: "";
@@ -1019,6 +1026,11 @@ button {
   -webkit-transition: ease-out 0.2s;
   transition: ease-out 0.2s;
 }
+.portfolio__item:hover {
+  padding-bottom: 20px;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
 .portfolio__item:hover::before {
   opacity: 0.5;
   -webkit-transition: ease-out 0.2s;
@@ -1028,6 +1040,11 @@ button {
   left: 0;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.portfolio__item:hover img {
+  margin-top: -20px;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 .portfolio__overlay {
   position: absolute;
@@ -1171,9 +1188,18 @@ button {
       -ms-flex-pack: start;
           justify-content: flex-start;
   border: 1px solid #e6e6e6;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 .news__item:nth-child(3n) {
   margin-right: 0;
+}
+.news__item:hover,
+.news__item:active {
+  -webkit-box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 .news__tag {
   position: absolute;
