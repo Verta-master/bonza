@@ -1,0 +1,127 @@
+.news {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.news__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.news__item {
+  position: relative;
+  width: 370px;
+  margin-right: 45px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #e6e6e6;
+  
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.news__tag {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px;
+  font-weight: 500;
+  line-height: 28px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  .transition();
+  
+  &:hover,
+  &:active {
+    border-color: @green;
+    background-color: @green;
+    .transition();
+  }
+}
+
+.news__img {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+  img {
+    display: block;
+  }
+}
+
+.news__info {
+  flex-grow: 1;
+  padding: 34px 40px;
+  
+  time {
+    display: block;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 14px;
+    color: rgba(17,17,17,0.75);
+  }
+}
+
+.news__title {
+  margin-bottom: 26px;
+  font-family: "Fira Sans Extra Condensed", "Arial", sans-serif;
+  line-height: 34px;
+  font-size: 28px;
+  font-weight: 600;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @green;
+    .transition();
+  }
+}
+
+.news__bottom {
+  margin-top: auto;
+  padding: 10px 40px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.news__comment,
+.news__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  margin-right: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
+  color: rgba(17,17,17,0.75);
+  background-image: url(../img/icon-user.svg);
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: center left;
+}
+
+.news__comment {
+  background-image: url(../img/icon-comment.svg);
+}
+
+.news__link {
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @green;
+    .transition();
+  }
+}
