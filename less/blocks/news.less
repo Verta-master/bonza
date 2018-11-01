@@ -20,9 +20,16 @@
   flex-direction: column;
   justify-content: flex-start;
   border: 1px solid #e6e6e6;
+  .transition();
   
   &:nth-child(3n) {
     margin-right: 0;
+  }
+  
+  &:hover,
+  &:active {
+    box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+    .transition()
   }
 }
 

@@ -9,11 +9,15 @@
 .portfolio__item {
   position: relative;
   width: 30%;
+  height: 380px;
   margin-bottom: 30px;
   overflow: hidden;
+  padding-bottom: 0;
   
   img {
     display: block;
+    margin-top: 0;
+    .transition();
   }
   
   &::before {
@@ -29,6 +33,9 @@
   }
   
   &:hover {
+    padding-bottom: 20px;
+    .transition();
+    
     &::before {
       opacity: 0.5;
       .transition();
@@ -36,6 +43,10 @@
     .portfolio__overlay {
       left: 0;
       transition: ease-out 0.3s;
+    }
+    img {
+      margin-top: -20px;
+      .transition();
     }
   }
 }

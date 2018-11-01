@@ -240,7 +240,7 @@
       </div>
     </section>
     
-    <section class="video">
+    <section class="video" data-paroller-factor="0.3" data-paroller-type="background" data-paroller-direction="vertical">
       <div class="wrapper video__wrap">
         <div class="video__info">
           <div class="title">
@@ -410,7 +410,7 @@
       </ul>
     </section>
     
-    <section class="project">
+    <section class="project" data-paroller-factor="0.3" data-paroller-type="background" data-paroller-direction="vertical">
       <div class="wrapper">
         <div class="project__wrap">
           <div class="project__block">
@@ -465,6 +465,7 @@
   <script src="js/counter.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+  <script src="js/jquery.paroller.min.js"></script>
 
 <!-- Sliders -->
   <script>
@@ -476,12 +477,19 @@
       simulateTouch: false,
       preventClicks: false,
       preventClicksPropagation: false,
+//      autoplay: true,
     });
   </script>
   
   <!-- Animation -->
   <script>
     new WOW().init();
+  </script>
+  
+  <!-- Parallax -->
+  <script>
+    $('.project').paroller();
+    $('.video').paroller();
   </script>
 </body>
 </html>
