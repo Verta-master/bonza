@@ -1,0 +1,32 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  i {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'FontAwesome';
+  }
+  
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    .transition();
+    
+    &:hover,
+    &:active {
+      color: @green;
+      .transition();
+    }
+  }
+  
+  li {
+    margin-left: 18px;
+  }
+}
