@@ -29,56 +29,6 @@
   line-height: 44px;
 }
 
-.category__link {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 15px 30px;
-  border: 1px solid rgba(255,255,255,0.15);
-  overflow: hidden;
-  
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 150%;
-    transform: translate(-50%, -50%);
-    content: "\f178";
-    font-size: 32px;
-    font-weight: 700;
-    font-family: 'FontAwesome';
-    color: @green;
-    .transition();
-  }
-  
-  span {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: 0;
-    left: 0;
-    font-family: "Fira Sans Extra Condensed", "Arial", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 32px;
-    letter-spacing: 1px;
-    .transition();
-  }
-  
-  &:hover,
-  &:active {
-    span {
-      left: -150%;
-      .transition();
-    }
-    
-    &::after {
-      left: 50%;
-      .transition();
-    }
-  }
-}
-
 .category__img {
   display: block;
   position: relative;
