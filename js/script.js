@@ -11,8 +11,10 @@ $('.menu__btn').click(function() {
 $(window).scroll(function(){
   if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
     $(".arrow-top").fadeIn();
+    $(".header").addClass("header--scroll");
   } else {
     $(".arrow-top").fadeOut();
+    $(".header").removeClass("header--scroll");
   };
 });
 
