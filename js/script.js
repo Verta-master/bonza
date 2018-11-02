@@ -4,8 +4,15 @@ jQuery(function($) {
 //Mobile menu
 $('.menu__btn').click(function() {
   $('.menu').toggleClass('menu--opened');
-  $('.menu__list').slideToggle();
-})
+  $('.menu_list').slideToggle();
+});
+
+if (window.innerWidth < 1022) {
+  $('.menu__link').click(function(e) {
+    e.preventDefault();
+    $(this).next().slideToggle();
+  });
+};
 
 //Scroll to top
 $(window).scroll(function(){
