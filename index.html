@@ -163,17 +163,17 @@
           <div class="swiper-slide promo__slide">
             <img src="img/slider-bg1.jpg" alt="Elite architecture theme" width="1920" height="1080">
             <div class="promo__info">
-              <p class="promo__top">Elite architecture theme</p>
-              <p class="promo__title">Elite eco houses and architecture</p>
-              <a href="#" class="promo__link">Scroll to read more</a>
+              <p class="promo__top animated slideInLeft">Elite architecture theme</p>
+              <p class="promo__title animated slideInLeft delay-2s">Elite eco houses and architecture</p>
+              <a href="#" class="promo__link animated slideInLeft delay-4s">Scroll to read more</a>
             </div>
-          </div>
+          </div>delay-2s
           <div class="swiper-slide promo__slide">
             <img src="img/slider-bg2.jpg" alt="Open your business" width="1920" height="1080">
             <div class="promo__info">
-              <p class="promo__top">Open your business</p>
-              <p class="promo__title">Amazing elite interiors</p>
-              <a href="#" class="promo__link">Scroll to show projects</a>
+              <p class="promo__top animated slideInLeft">Open your business</p>
+              <p class="promo__title animated slideInLeft delay-2s">Amazing elite interiors</p>
+              <a href="#" class="promo__link animated slideInLeft delay-4s">Scroll to show projects</a>
             </div>
           </div>
         </div>
@@ -471,7 +471,18 @@
       simulateTouch: false,
       preventClicks: false,
       preventClicksPropagation: false,
-//      autoplay: true,
+      loop: true,
+      autoplay: true,
+    });
+    mySwiper.on('slideChangeTransitionStart', function () {
+      $('.promo__title').removeClass('slideInLeft');
+      $('.promo__top').removeClass('slideInLeft');
+      $('.promo__link').removeClass('slideInLeft');
+    });
+    mySwiper.on('slideChangeTransitionEnd', function () {
+      $('.promo__title').addClass('slideInLeft');
+      $('.promo__top').addClass('slideInLeft');
+      $('.promo__link').addClass('slideInLeft');
     });
   </script>
   
